@@ -1,0 +1,20 @@
+language: python
+python:
+  - "3.6"
+  - "3.7"
+
+
+# command to install dependencies
+install:
+  - pip install -r requirements.txt
+  - pip install coverage codecov
+  - python setup.py install
+
+# command to run tests
+script:
+  - coverage run -p examples/demo1.py
+
+# Push the results back to codecov
+after_success:
+  - coverage combine
+  - codecov
