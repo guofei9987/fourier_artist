@@ -1,3 +1,8 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# @Time    : 2019/12/12
+# @Author  : github.com/guofei9987
+
 import numpy as np
 import matplotlib.pyplot as plt
 from fourier_artist.clean_data import get_data_from_func, clean_data
