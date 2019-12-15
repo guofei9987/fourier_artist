@@ -18,7 +18,7 @@
   </tr>
 </table>
 
-## 傅里叶变换画心
+## 用几个圆画任意图
 
 [![PyPI](https://img.shields.io/pypi/v/fourier_artist)](https://pypi.org/project/fourier_artist/)
 [![Build Status](https://travis-ci.com/guofei9987/fourier_artist.svg?branch=master)](https://travis-ci.com/guofei9987/fourier_artist)
@@ -34,7 +34,8 @@
 pip install fourier_artist
 ```
 
-### 使用
+### 示例：傅里叶变换画心
+（随便画几个圈都是爱你的样子）
 
 ```python
 # 导入包
