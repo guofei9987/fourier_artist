@@ -58,4 +58,33 @@ plt.show()
 ```
 
 
-![fourier](https://github.com/guofei9987/fourier_artist/blob/master/docs/fourier.gif?raw=true)
+![fourier](docs/fourier.gif?raw=true)
+
+## draw everything you like
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from fourier_artist.clean_data import get_data_from_func, clean_data
+from fourier_artist.draw import draw
+from matplotlib.animation import FuncAnimation
+
+# 导入数据
+X = get_data_from_func()
+
+n = 100
+t = np.linspace(0, 2 * np.pi, n)
+x = (np.sin(t)) ** 2
+y = (np.cos(t)) ** 2 + np.cos(t)
+X = x + 1j * y
+
+# 清洗数据
+X = clean_data(X)
+fig, ax = plt.subplots(1, 1)
+update_all = draw(X, fig, ax)
+ani = FuncAnimation(fig, update_all, blit=True, interval=25, frames=len(X))
+# ani.save('demo2.gif', writer='pillow')
+plt.show()
+```
+
+
+![demo2](docs/demo2.gif)
